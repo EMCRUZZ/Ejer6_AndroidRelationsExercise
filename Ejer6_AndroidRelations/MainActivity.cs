@@ -12,6 +12,7 @@ namespace Ejer6_AndroidRelations
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        EditText inputTexto;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -23,6 +24,50 @@ namespace Ejer6_AndroidRelations
 
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
+
+            //MIS IDS
+            inputTexto = FindViewById<EditText>(Resource.Id.inputTexto);
+
+            Button idboton = FindViewById<Button>(Resource.Id.idboton1);
+            idboton.Click += Idboton_Click;
+            /*
+             * 
+             //no me encuentra los ID del 2 en adelante siendo exactamente lo mismo pero adaptado
+
+            Button idboton2 = FindViewById<Button>(Resource.Id.idboton2);
+            idboton2.Click += Idboton_Click;
+
+            Button idboton3 = FindViewById<Button>(Resource.Id.idboton3);
+            idboton3.Click += Idboton_Click;
+
+            Button idboton4 = FindViewById<Button>(Resource.Id.idboton4);
+            idboton4.Click += Idboton_Click;
+
+            Button idboton5 = FindViewById<Button>(Resource.Id.idboton5);
+            idboton5.Click += Idboton_Click;
+
+            Button idboton6 = FindViewById<Button>(Resource.Id.idboton6);
+            idboton6.Click += Idboton_Click;
+
+            Button idboton7 = FindViewById<Button>(Resource.Id.idboton7);
+            idboton7.Click += Idboton_Click;
+
+            Button idboton8 = FindViewById<Button>(Resource.Id.idboton8);
+            idboton8.Click += Idboton_Click;
+
+            Button idboton9 = FindViewById<Button>(Resource.Id.idboton9);
+            idboton9.Click += Idboton_Click;
+
+            Button idboton0 = FindViewById<Button>(Resource.Id.idboton0);
+            idboton0.Click += Idboton_Click;
+            */
+        }
+
+        private void Idboton_Click(object sender, EventArgs e)
+        {
+            //obtengo el numero de boton que sea pulsado para poder reutilizar la función
+            Button temp = (Button)sender;
+            inputTexto.Text= inputTexto.Text.ToString()+ temp.Text.ToString();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
