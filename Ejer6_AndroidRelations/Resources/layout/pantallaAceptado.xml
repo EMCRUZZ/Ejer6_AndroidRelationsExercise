@@ -10,6 +10,6 @@
     android:layout_height="wrap_content"
     android:textSize="40dp"
     android:layout_centerInParent="true"
-    android:text="Pantalla nueva!!!"
+    android:text="poner aqui dos pestañas.."
     />
 </RelativeLayout>
