@@ -77,7 +77,6 @@ namespace Ejer6_AndroidRelations
                 inputTexto.SetTextColor(Android.Graphics.Color.Red);
             }
         }
-
         private void Idboton_Click(object sender, EventArgs e)
         {
             //obtengo el numero de boton que sea pulsado para poder reutilizar la función
