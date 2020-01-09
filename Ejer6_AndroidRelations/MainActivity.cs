@@ -6,6 +6,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using AlertDialog = Android.App.AlertDialog;
 
 namespace Ejer6_AndroidRelations
 {
@@ -31,20 +32,44 @@ namespace Ejer6_AndroidRelations
             Button idboton = FindViewById<Button>(Resource.Id.idboton1);
             idboton.Click += Idboton_Click;
 
-            /* Al igual que los otros finds este tampoco me encuentra el id en el resource.id 
-             
-            var idbotonOK = FindViewById<Button>(Resource.Id.idbotonOK);
-            idboton.Click += IdbotonOK_Click;
-            */
+            Button idboton2 = FindViewById<Button>(Resource.Id.idboton2);
+            idboton2.Click += Idboton_Click;
 
-            //he omitido de esta rama los otros FindViewById comentados mientras que no sepa el porque no funcionan.
+            Button idboton3 = FindViewById<Button>(Resource.Id.idboton3);
+            idboton3.Click += Idboton_Click;
+
+            Button idboton4 = FindViewById<Button>(Resource.Id.idboton4);
+            idboton4.Click += Idboton_Click;
+
+            Button idboton5 = FindViewById<Button>(Resource.Id.idboton5);
+            idboton5.Click += Idboton_Click;
+
+            Button idboton6 = FindViewById<Button>(Resource.Id.idboton6);
+            idboton6.Click += Idboton_Click;
+
+            Button idboton7 = FindViewById<Button>(Resource.Id.idboton7);
+            idboton7.Click += Idboton_Click;
+
+            Button idboton8 = FindViewById<Button>(Resource.Id.idboton8);
+            idboton8.Click += Idboton_Click;
+
+            Button idboton9 = FindViewById<Button>(Resource.Id.idboton9);
+            idboton9.Click += Idboton_Click;
+
+            Button idboton0 = FindViewById<Button>(Resource.Id.idboton0);
+            idboton0.Click += Idboton_Click;
+
+            var idbotonOK = FindViewById<Button>(Resource.Id.idbotonOK);
+            idbotonOK.Click += IdbotonOK_Click;
+            
         }
 
         private void IdbotonOK_Click(object sender, EventArgs e)
         {
             if (inputTexto.Text.ToString().Equals("1234"))
             {
-                //Creo y levanto la siguiente pantalla de codigo correcto
+                //invoco la siguiente pantalla
+                SetContentView(Resource.Layout.pantallaAceptado);
             }
             else
             {
