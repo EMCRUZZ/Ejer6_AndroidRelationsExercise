@@ -30,9 +30,6 @@ namespace Ejer6_AndroidRelations
 
             Button idboton = FindViewById<Button>(Resource.Id.idboton1);
             idboton.Click += Idboton_Click;
-            /*
-             * 
-             //no me encuentra los ID del 2 en adelante siendo exactamente lo mismo pero adaptado
 
             Button idboton2 = FindViewById<Button>(Resource.Id.idboton2);
             idboton2.Click += Idboton_Click;
@@ -60,7 +57,7 @@ namespace Ejer6_AndroidRelations
 
             Button idboton0 = FindViewById<Button>(Resource.Id.idboton0);
             idboton0.Click += Idboton_Click;
-            */
+            
         }
 
         private void Idboton_Click(object sender, EventArgs e)
