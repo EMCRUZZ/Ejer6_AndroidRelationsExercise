@@ -61,7 +61,6 @@ namespace Ejer6_AndroidRelations
 
             var idbotonOK = FindViewById<Button>(Resource.Id.idbotonOK);
             idbotonOK.Click += IdbotonOK_Click;
-            
         }
 
         private void IdbotonOK_Click(object sender, EventArgs e)
@@ -69,6 +68,7 @@ namespace Ejer6_AndroidRelations
             if (inputTexto.Text.ToString().Equals("1234"))
             {
                 //invoco la siguiente pantalla
+                guardarSettings();//guardo el evento de que se haya conseguido loguear
                 SetContentView(Resource.Layout.pantallaAceptado);
             }
             else
@@ -83,9 +83,11 @@ namespace Ejer6_AndroidRelations
             Button temp = (Button)sender;
             inputTexto.Text = inputTexto.Text.ToString() + temp.Text.ToString();
         }
+
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.menu_main, menu);
+            recuperarSettings();
             return true;
         }
 
@@ -106,6 +108,29 @@ namespace Ejer6_AndroidRelations
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
                 .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
-	}
+
+        protected void guardarSettings()
+        {
+            //Guardar datos
+            var preferencias = Application.Context.GetSharedPreferences("MyApp", Android.Content.FileCreationMode.Private);
+            var editorPreferencias = preferencias.Edit();
+            editorPreferencias.PutBoolean("inicioHecho",true);
+            editorPreferencias.Commit();
+
+        }
+
+        protected void recuperarSettings()
+        {// Funcion llamada desde OnCreate
+            //recuperar datos 
+            var preferencias = Application.Context.GetSharedPreferences("MyApp", Android.Content.FileCreationMode.Private);
+            bool editorPreferencias = preferencias.GetBoolean("inicioHecho", false);
+            if (editorPreferencias==true)
+            {
+                //invoco la siguiente pantalla
+                SetContentView(Resource.Layout.pantallaAceptado);
+            }
+        }
+
+    }
 }
 
