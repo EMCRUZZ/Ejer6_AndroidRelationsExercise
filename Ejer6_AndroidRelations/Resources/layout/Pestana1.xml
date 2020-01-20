@@ -21,7 +21,21 @@
         android:textColorHint="@color/material_blue_grey_800"
         android:maxLength="12"
     />
+
+    <Spinner
+        android:layout_marginTop="50px"
+        android:id="@+id/comboboxAndroid"
+        android:layout_width="290px"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:prompt="@string/comboboxAndroid_prompt"
+    />
+    
+
+
+
     <Button
+        android:layout_marginTop="100px"
         android:text="Boton"
         android:layout_width="200px"
         android:layout_height="wrap_content"

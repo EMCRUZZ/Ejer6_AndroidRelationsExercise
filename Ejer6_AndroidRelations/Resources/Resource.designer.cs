@@ -105,6 +105,22 @@ namespace Ejer6_AndroidRelations
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int comboboxAndroid_array = 2131623936;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -2396,8 +2412,8 @@ namespace Ejer6_AndroidRelations
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int action_settings = 2131230911;
+			// aapt resource value: 0x7f0800c0
+			public const int action_settings = 2131230912;
 			
 			// aapt resource value: 0x7f0800a8
 			public const int action_text = 2131230888;
@@ -2467,6 +2483,9 @@ namespace Ejer6_AndroidRelations
 			
 			// aapt resource value: 0x7f080039
 			public const int collapseActionView = 2131230777;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int comboboxAndroid = 2131230908;
 			
 			// aapt resource value: 0x7f08009a
 			public const int container = 2131230874;
@@ -2630,14 +2649,14 @@ namespace Ejer6_AndroidRelations
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800be
-			public const int masked = 2131230910;
+			// aapt resource value: 0x7f0800bf
+			public const int masked = 2131230911;
 			
 			// aapt resource value: 0x7f0800ac
 			public const int media_actions = 2131230892;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int message = 2131230908;
+			// aapt resource value: 0x7f0800bd
+			public const int message = 2131230909;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2894,8 +2913,8 @@ namespace Ejer6_AndroidRelations
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int visible = 2131230909;
+			// aapt resource value: 0x7f0800be
+			public const int visible = 2131230910;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3167,8 +3186,8 @@ namespace Ejer6_AndroidRelations
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0e0000
-			public const int menu_main = 2131623936;
+			// aapt resource value: 0x7f0f0000
+			public const int menu_main = 2131689472;
 			
 			static Menu()
 			{
@@ -3306,6 +3325,9 @@ namespace Ejer6_AndroidRelations
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
+			
+			// aapt resource value: 0x7f090029
+			public const int comboboxAndroid_prompt = 2131296297;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;

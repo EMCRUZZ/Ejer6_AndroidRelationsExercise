@@ -55,8 +55,23 @@ namespace Ejer6_AndroidRelations
 
             var idbotonOK = FindViewById<Button>(Resource.Id.idbotonOK);
             idbotonOK.Click += IdbotonOK_Click;
-        }
+            /*
+            //ID COMBOBOX
+            Spinner comboboxAndroid = FindViewById<Spinner>(Resource.Id.comboboxAndroid);
 
+            comboboxAndroid.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            var adapter = ArrayAdapter.CreateFromResource(this,0,2);
+          //var adapter = ArrayAdapter.CreateFromResource (this, Resource.Array.planets_array, Android.Resource.Layout.SimpleSpinnerItem);
+            adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            comboboxAndroid.Adapter = adapter;
+            */
+        }
+        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        {
+            Spinner spinner = (Spinner)sender;
+            string toast = string.Format("El genero seleccionado tiene numero: {0}", spinner.GetItemAtPosition(e.Position));
+            Toast.MakeText(this, toast, ToastLength.Long).Show();
+        }
         private void IdbotonOK_Click(object sender, EventArgs e)
         {
             if (inputTexto.Text.ToString().Equals("1234"))
