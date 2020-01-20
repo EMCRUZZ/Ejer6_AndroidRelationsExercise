@@ -19,12 +19,6 @@ namespace Ejer6_AndroidRelations
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
-
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
-
             // Mis ID
 
             inputTexto = FindViewById<EditText>(Resource.Id.inputTexto);
@@ -69,7 +63,8 @@ namespace Ejer6_AndroidRelations
             {
                 //invoco la siguiente pantalla
                 guardarSettings();//guardo el evento de que se haya conseguido loguear
-                SetContentView(Resource.Layout.pantallaAceptado);
+                //manera rechulona de invocar a la siguiente pantalla
+                StartActivity(typeof(LogicaPantallaAceptado));
             }
             else
             {
@@ -102,13 +97,6 @@ namespace Ejer6_AndroidRelations
             return base.OnOptionsItemSelected(item);
         }
 
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
-        }
-
         protected void guardarSettings()
         {
             //Guardar datos
@@ -116,7 +104,6 @@ namespace Ejer6_AndroidRelations
             var editorPreferencias = preferencias.Edit();
             editorPreferencias.PutBoolean("inicioHecho",true);
             editorPreferencias.Commit();
-
         }
 
         protected void recuperarSettings()
@@ -126,8 +113,8 @@ namespace Ejer6_AndroidRelations
             bool editorPreferencias = preferencias.GetBoolean("inicioHecho", false);
             if (editorPreferencias==true)
             {
-                //invoco la siguiente pantalla
-                SetContentView(Resource.Layout.pantallaAceptado);
+                //invoco la siguiente pantalla de manera PRO gracias a la envoltura que le creo con la clase
+                StartActivity(typeof(LogicaPantallaAceptado));
             }
         }
 

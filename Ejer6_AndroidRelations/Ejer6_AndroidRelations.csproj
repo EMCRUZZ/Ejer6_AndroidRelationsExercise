@@ -56,7 +56,11 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FragmentAdapter.cs" />
+    <Compile Include="LogicaPantallaAceptado.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Pestanias\Pestana1.cs" />
+    <Compile Include="Pestanias\Pestana2.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,6 +105,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\pantallaAceptado.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Pestana1.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Pestana2.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
