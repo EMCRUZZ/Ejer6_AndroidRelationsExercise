@@ -3,6 +3,8 @@ using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.Design.Widget;
+using Android.Support.V4.App;
+using Android.Support.V4.View;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
@@ -11,7 +13,7 @@ using AlertDialog = Android.App.AlertDialog;
 namespace Ejer6_AndroidRelations
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : FragmentActivity
     {
         EditText inputTexto;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -19,11 +21,32 @@ namespace Ejer6_AndroidRelations
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
-            Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
+            //Pestañas
+            ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+            var contPaginas = FindViewById<ViewPager>(Resource.Id.contPaginas);
+            var adaptor = new GenericFragmentPagerAdaptor(SupportFragmentManager);
+            adaptor.AddFragmentView((i, v, b) =>
+            {
+                var view = i.Inflate(Resource.Layout.design_layout_tab_text,v, false);
+                var textoEjemplo = view.FindViewById<TextView>(Resource.Id.textoPestaña);
+                textoEjemplo.Text = "PRIMERA PESTAÑA";
+                
+                return view;
+            });
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
+            adaptor.AddFragmentView((i, v, b) =>
+            {
+                var view = i.Inflate(Resource.Layout.design_layout_tab_text, v, false);
+                var textoEjemplo = view.FindViewById<TextView>(Resource.Id.textoPestaña);
+                textoEjemplo.Text = "SEGUNDA PESTAÑA";
+                
+                return view;
+            });
+
+            contPaginas.Adapter = adaptor;
+            contPaginas.SetOnPageChangeListener(new ViewPageListenerForActionBar(ActionBar));
+            ActionBar.AddTab(contPaginas.GetViewPageTab(ActionBar, "Primera pestaña"));
+            ActionBar.AddTab(contPaginas.GetViewPageTab(ActionBar, "Segunda pestaña"));
 
             //Mis ID
 
@@ -100,13 +123,6 @@ namespace Ejer6_AndroidRelations
             }
 
             return base.OnOptionsItemSelected(item);
-        }
-
-        private void FabOnClick(object sender, EventArgs eventArgs)
-        {
-            View view = (View) sender;
-            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-                .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
 
         protected void guardarSettings()
