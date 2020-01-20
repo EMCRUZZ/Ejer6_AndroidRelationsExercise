@@ -25,7 +25,7 @@ namespace Ejer6_AndroidRelations
             FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
 
-            //Mis ID
+            // Mis ID
 
             inputTexto = FindViewById<EditText>(Resource.Id.inputTexto);
 
