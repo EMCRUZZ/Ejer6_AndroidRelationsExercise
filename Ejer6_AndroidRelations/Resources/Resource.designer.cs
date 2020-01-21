@@ -105,22 +105,6 @@ namespace Ejer6_AndroidRelations
 			}
 		}
 		
-		public partial class Array
-		{
-			
-			// aapt resource value: 0x7f0e0000
-			public const int comboboxAndroid_array = 2131623936;
-			
-			static Array()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Array()
-			{
-			}
-		}
-		
 		public partial class Attribute
 		{
 			
@@ -2484,9 +2468,6 @@ namespace Ejer6_AndroidRelations
 			// aapt resource value: 0x7f080039
 			public const int collapseActionView = 2131230777;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int comboboxAndroid = 2131230908;
-			
 			// aapt resource value: 0x7f08009a
 			public const int container = 2131230874;
 			
@@ -2828,6 +2809,9 @@ namespace Ejer6_AndroidRelations
 			
 			// aapt resource value: 0x7f080087
 			public const int submit_area = 2131230855;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int switchGenero = 2131230908;
 			
 			// aapt resource value: 0x7f0800ba
 			public const int tabLayout = 2131230906;
@@ -3186,8 +3170,8 @@ namespace Ejer6_AndroidRelations
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0f0000
-			public const int menu_main = 2131689472;
+			// aapt resource value: 0x7f0e0000
+			public const int menu_main = 2131623936;
 			
 			static Menu()
 			{
@@ -3325,9 +3309,6 @@ namespace Ejer6_AndroidRelations
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
-			
-			// aapt resource value: 0x7f090029
-			public const int comboboxAndroid_prompt = 2131296297;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;
