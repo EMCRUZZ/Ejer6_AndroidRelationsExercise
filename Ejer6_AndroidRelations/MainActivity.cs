@@ -58,6 +58,8 @@ namespace Ejer6_AndroidRelations
             idbotonOK.Click += IdbotonOK_Click;
 
 
+
+
         }
         
         private void IdbotonOK_Click(object sender, EventArgs e)
