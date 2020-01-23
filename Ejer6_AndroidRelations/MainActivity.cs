@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Android.App;
 using Android.OS;
@@ -12,11 +13,17 @@ using AlertDialog = Android.App.AlertDialog;
 namespace Ejer6_AndroidRelations
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+
     public class MainActivity : AppCompatActivity
     {
+
         EditText inputTexto;
+
+        
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
 
@@ -58,7 +65,7 @@ namespace Ejer6_AndroidRelations
             idbotonOK.Click += IdbotonOK_Click;
 
 
-
+           
 
         }
         

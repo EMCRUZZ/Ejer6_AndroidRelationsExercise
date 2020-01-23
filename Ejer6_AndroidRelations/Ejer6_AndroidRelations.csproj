@@ -59,6 +59,7 @@
     <Compile Include="FragmentAdapter.cs" />
     <Compile Include="LogicaPantallaAceptado.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Pestanias\ListViewLogic.cs" />
     <Compile Include="Pestanias\Pestana1.cs" />
     <Compile Include="Pestanias\Pestana2.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

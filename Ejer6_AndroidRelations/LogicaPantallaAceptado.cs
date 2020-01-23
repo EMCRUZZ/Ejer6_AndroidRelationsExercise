@@ -15,6 +15,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace Ejer6_AndroidRelations
 {
+    [Activity]
     class LogicaPantallaAceptado : AppCompatActivity
     {
         ViewPager vp;
