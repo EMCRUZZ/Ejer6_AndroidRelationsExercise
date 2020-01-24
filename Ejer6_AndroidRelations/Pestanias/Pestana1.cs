@@ -40,7 +40,7 @@ namespace Ejer6_AndroidRelations
             }
             
             //Creacion del registro
-            filaFormateada = $"Nombre: {edNombre.Text.ToString()}, Apellido: {edApellido.Text.ToString()}, Genero: {genero}";
+            filaFormateada = $"Nombre: {edNombre.Text}, Apellido: {edApellido.Text}, Genero: {genero}";
 
             //ID del boton que realiza la ejecucion de carga de datos en la lista
             Button botonCargar = v.FindViewById<Button>(Resource.Id.botonCargar);

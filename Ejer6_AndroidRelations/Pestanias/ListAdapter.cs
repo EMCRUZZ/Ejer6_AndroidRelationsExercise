@@ -49,18 +49,12 @@ namespace Ejer6_AndroidRelations.Pestanias
             View row = convertView;
             if (row == null)
             {
-                row = LayoutInflater.From(actualContext).Inflate(Resource.Layout.Pestana2, null, false);
+                row = LayoutInflater.From(actualContext).Inflate(Resource.Layout.lista, null, false);
             }
-            /*
-            TextView nombre = row.FindViewById<TextView>(Resource.Id.textView1);
-            nombre.Text = Lista[position].nombre;
-            TextView apellido = row.FindViewById<TextView>(Resource.Id.textView2);
-            apellido.Text = Lista[position].apellido;
-            TextView sexo = row.FindViewById<TextView>(Resource.Id.textView3);
-            sexo.Text = Lista[position].sexo;
-            TextView id = row.FindViewById<TextView>(Resource.Id.textView4);
-            id.Text = ""+Lista[position].id;
-			*/
+
+            TextView vistaLista = row.FindViewById<TextView>(Resource.Id.vistaLista);
+            vistaLista.Text = Lista[position];
+
             return row;
         }
         public override void NotifyDataSetChanged()
