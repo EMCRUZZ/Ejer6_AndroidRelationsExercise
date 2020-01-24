@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -13,6 +13,8 @@
         android:textAlignment="center"
         android:textColorHint="@color/material_blue_grey_800"
         android:maxLength="12"
+        android:id="@+id/idNombre"
+        android:inputType="text" 
     />
     <EditText
         android:hint="Apellido"
@@ -21,6 +23,8 @@
         android:textAlignment="center"
         android:textColorHint="@color/material_blue_grey_800"
         android:maxLength="12"
+        android:id="@+id/idApellido"
+        android:inputType="text" 
     />
 
     <TextView
@@ -64,9 +68,10 @@
 
     <Button
         android:layout_marginTop="100px"
-        android:text="Boton"
+        android:text="Cargar"
         android:layout_width="200px"
         android:layout_height="wrap_content"
+        android:id="@+id/botonCargar"
     />
 
 </LinearLayout>

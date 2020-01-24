@@ -19,8 +19,6 @@ namespace Ejer6_AndroidRelations
 
         EditText inputTexto;
 
-        
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -63,10 +61,6 @@ namespace Ejer6_AndroidRelations
 
             var idbotonOK = FindViewById<Button>(Resource.Id.idbotonOK);
             idbotonOK.Click += IdbotonOK_Click;
-
-
-           
-
         }
         
         private void IdbotonOK_Click(object sender, EventArgs e)
