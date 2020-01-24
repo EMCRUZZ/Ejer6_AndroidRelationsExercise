@@ -10,6 +10,7 @@ using Android.Views;
 using Android.Widget;
 using Ejer6_AndroidRelations.Pestanias;
 using Ejer6_AndroidRelations.Resources.layout;
+using SQLite;
 
 namespace Ejer6_AndroidRelations
 {
@@ -29,6 +30,15 @@ namespace Ejer6_AndroidRelations
             ListViewAdapter adapter = new ListViewAdapter(this.Context, ClaseLista.Instance.MyList);
             mainList.Adapter = adapter;
 
+            var db = new SQLiteConnection("baseDeDatos");
+            db.CreateTable<string>();
+
+            /*
+            foreach (var item in db.Table<string>())
+            {
+                ClaseLista.Instance.MyList.Add(item);
+            }
+            */
             adapter.NotifyDataSetChanged();
             
             return v;

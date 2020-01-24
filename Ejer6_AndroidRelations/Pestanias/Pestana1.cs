@@ -10,6 +10,7 @@ using Android.Views;
 using Android.Widget;
 using Ejer6_AndroidRelations.Pestanias;
 using Ejer6_AndroidRelations.Resources.layout;
+using SQLite;
 
 namespace Ejer6_AndroidRelations
 {
@@ -52,7 +53,15 @@ namespace Ejer6_AndroidRelations
         //Metodo que rellena la lista al pulsar el boton de añadir en pestaña 1
         private void botonCargaLista(object sender, EventArgs e)
         {
+
             ClaseLista.Instance.MyList.Add(filaFormateada);
+        }
+
+       public void persistenciaBDD()
+        {
+            var db = new SQLiteConnection("baseDeDatos");
+            db.CreateTable<string>();
+            db.Insert(filaFormateada);
         }
     }
 }
